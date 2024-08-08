@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Header content here -->
+    </header>
+    <main>
+        <section class="inquiry">
+            <h2>Send an Inquiry</h2>
+            <form id="inquiry-form">
+                <label for="from_name">Your Name:</label>
+                <input type="text" id="from_name" placeholder="Your Name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" placeholder="Subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Your message" required></textarea>
+
+                <button type="submit">Send Inquiry</button>
+            </form>
+            <div id="response"></div>
+        </section>
+    </main>
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+
+    <!-- Load EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <!-- Initialize EmailJS -->
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("T2bFL8n3uo7kxRjtR"); // Replace with your Public Key (User ID)
+        })();
+    </script>
+
+    <!-- Your custom script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('inquiry-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                var templateParams = {
+                    from_name: document.getElementById('from_name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                console.log('Sending email with params:', templateParams);
+                emailjs.send("service_qjy238u", "template_piuzibq",templateParams)    
+                    .then(function (response) {
+                        console.log('Email sent successfully:', response);
+                        document.getElementById('response').innerText = 'Inquiry sent successfully!';
+                    }, function (error) {
+                        console.error('Failed to send email:', error);
+                        document.getElementById('response').innerText = 'Failed to send inquiry. Please try again.';
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
