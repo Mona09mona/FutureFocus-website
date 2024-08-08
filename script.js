@@ -11,21 +11,4 @@ document.addEventListener('DOMContentLoaded', function() {
             submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
         });
     });
-
-//   document.addEventListener('DOMContentLoaded', function() {
-//    const form = document.querySelector('form');
-    
-//    form.addEventListener('submit', function(event) {
-//        const name = document.getElementById('name').value;
-//        const email = document.getElementById('email').value;
-//        const subject = document.getElementById('subject').value;
-//        const message = document.getElementById('message').value;
-        
-//        if (!name || !email || !subject || !message) {
-//            alert('Please fill in all fields.');
-//            event.preventDefault();
-//        }
-//    });
-//});
-
 });
