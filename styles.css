@@ -1016,3 +1016,115 @@ footer {
     margin-bottom: 10px;
     font-style: italic;
 }
+/* Custom navbar styles */
+/*.custom-navbar {
+    background-color: transparent !important;*/ /* Removes background color */
+/*}*/
+
+.navbar-nav .nav-link {
+    color: #f4f7f6 /* Change font color */
+    
+}
+
+    .navbar-nav .nav-link.active {
+        color: #f4f7f6; /* Font color for active link */
+    }
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Optional: inverts the color of the toggle icon for better contrast */
+}
+
+/* Optional: Adjust the padding or margins if needed */
+.navbar-nav {
+    padding-left: 0;
+    
+}
+/* Custom styles for the contact form and information section */
+.contact-header {
+    padding: 2rem;
+}
+
+.contact-content {
+    padding: 2rem;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+    .contact-info a:hover {
+        text-decoration: underline;
+    }
+
+/* Ensure social links are spaced nicely */
+.social-links a {
+    margin-right: 15px;
+}
+/* Additional styles for decorative headings */
+.decorative-heading {
+    position: relative;
+    display: inline-block;
+    *padding: 10px;
+    margin: 30px 0;
+    color: #e0f7fa; /* Deep Teal */
+    font-size: 20px;
+    font-weight: bold;
+   /* text-transform: uppercase;*/
+}
+
+    .decorative-heading::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 5px;
+        background: #007bff; /* Highlight color */
+        border-radius: 2px;
+    }
+
+    .decorative-heading::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        width: 100%;
+        height: 2px;
+        background: #00ecbc; /* Secondary highlight color */
+        border-radius: 2px;
+    }
+
+/* Contact Information Styles */
+.contact-content {
+    padding: 40px 0;
+}
+
+.contact-info-card {
+    background-color: #7cf8f6;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+    .contact-info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-info-card p {
+        margin: 10px 0;
+        font-size: 1.2em;
+        color: #555;
+    }
+
+    .contact-info-card a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .contact-info-card a:hover {
+            text-decoration: underline;
+        }
